@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getPercent } from '../Util';
 
-const apiUrl = "http://localhost:3001/api/"
+const apiUrl = "http://193.201.126.196/api/"
 const ws = new WebSocket("wss://ws-feed.pro.coinbase.com");
 const sellPercent = 1;
 
