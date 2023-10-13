@@ -1,19 +1,22 @@
 /* eslint-disable no-unused-vars */
 import './App.css';
-import Table from './components/Table';
-
+import { BrowserRouter as Router, Routes, Link, Route } from 'react-router-dom';
+import Tokens from './components/Tokens';
+import Header from './components/Header';
+import Setting from './components/Setting';
 
 function App() {
   return (
     <>
-      <div className='max-w-7xl m-auto'>
-        <div className="text-center">
-          <p className='text-2xl text-white pb-5'>Token List</p>
+      <Router>
+        <div className='max-w-7xl m-auto'>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Tokens />} />
+            <Route path="/setting" element={<Setting />} />
+          </Routes>
         </div>
-        <div className="relative overflow-x-auto">
-          <Table />
-        </div>
-      </div>
+      </Router>
     </>
   )
 }
